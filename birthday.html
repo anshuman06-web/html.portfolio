@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    /* ====== NEW BIRTHDAY PREMIUM THEME ====== */
+
+    body {
+        background: linear-gradient(135deg, #3e0066, #b300ff, #ff0099);
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding: 40px;
+        overflow-x: hidden;
+        animation: bgMove 8s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgMove {
+        0%   { background: linear-gradient(135deg, #3e0066, #b300ff); }
+        50%  { background: linear-gradient(135deg, #b300ff, #ff0099); }
+        100% { background: linear-gradient(135deg, #ff0099, #3e0066); }
+    }
+
+    /* SUPER STYLISH H1 */
+    /* --- Replace your existing h1 style with this --- */
+h1 {
+  font-size: 3.6rem;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  margin: 0.2em 0;
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 14px;
+  /* gradient text */
+  background: linear-gradient(90deg, #ffd86b 0%, #ffb74d 45%, #fff5d1 100%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+  background-clip: text;         /* future-proof */
+  -webkit-text-fill-color: transparent; /* important fallback fix */
+  color: #fff5d1; /* fallback for very old browsers */
+  /* luxury glow + depth */
+  text-shadow:
+    0 8px 28px rgba(0,0,0,0.6),
+    0 0 18px rgba(255,183,77,0.12);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.45);
+  transform-origin: center;
+  animation: shimmer 3.2s infinite linear;
+  will-change: transform, filter;
+}
+
+/* gentle shimmer + lift */
+@keyframes shimmer {
+  0%   { filter: brightness(1); transform: translateY(0) rotateX(0deg); }
+  45%  { filter: brightness(1.18); transform: translateY(-4px) rotateX(0.5deg); }
+  100% { filter: brightness(1); transform: translateY(0) rotateX(0deg); }
+}
+
+/* optional smaller-screen tweak */
+@media (max-width:600px){
+  h1 { font-size: 2.2rem; padding: 10px 16px; }
+}
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px rgba(255,225,255,0.4); }
+        100% { text-shadow: 0 0 25px rgba(255,255,255,0.9); }
+    }
+
+    /* H2 design */
+    h2 {
+        font-size: 2rem;
+        color: #ffe5ff;
+        margin-top: 20px;
+        text-shadow: 0 0 15px rgba(255, 170, 255, 0.7);
+        animation: upFade 1.3s ease-out;
+    }
+
+    @keyframes upFade {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Birthday Image */
+    img {
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255,255,255,0.4),
+                    0 0 50px rgba(255,0,200,0.4);
+        margin: 25px 0;
+        transition: transform 0.4s;
+    }
+
+    img:hover {
+        transform: scale(1.05) rotate(1deg);
+    }
+
+    /* List */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    ul li {
+        background: rgba(255,255,255,0.1);
+        padding: 12px 18px;
+        margin: 10px auto;
+        width: 60%;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    ul li:hover {
+        transform: translateX(10px);
+        background: rgba(255,255,255,0.2);
+    }
+
+    /* Map Link */
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        background: #ff47c4;
+        padding: 12px 20px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 0 15px rgba(255,70,196,0.6);
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: #ff89dd;
+        box-shadow: 0 0 25px rgba(255,70,196,0.9);
+        transform: translateY(-3px);
+    }
+
+    </style>
+</head>
+<body>
+    <h1>
+       It's My Birthday!
+    </h1>
+    <h2>
+        On the 6th February
+    </h2>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.JFjsBE_U9IqiWmy02-oDaQHaE8?w=1000&h=667&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Birthday cake" height="200px">
+    <h2>
+        What to bring:
+    </h2>
+    <ul>
+        <li>Baloons (I love baloons)</li>
+        <li>Cake (I'm really good at eating)</li>
+        <li>An Appetite (There will be lots of food)</li>
+    </ul>
+    <h2>
+        This is where you need to go:
+    </h2>
+    <a href="https://www.google.com/maps/@22.7239728,75.8638499,8z?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D">Google map link</a>
+
+</body>
+</html>

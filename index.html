@@ -4,6 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+   /* ===== GLOBAL PAGE ===== */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #000000);
+  color: #e6c87c; /* Soft Gold */
+  animation: fadeIn 1s ease-in;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffdd7f; /* Strong Gold */
+  text-shadow: 0 0 12px rgba(255, 215, 100, 0.4);
+}
+
+/* ===== DIVIDERS ===== */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #ffdd7f, #000, #ffdd7f);
+  margin: 30px 0;
+  opacity: 0.7;
+}
+
+/* ===== HOME SECTION ===== */
+#home {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 215, 100, 0.06); 
+  border: 1px solid rgba(255, 215, 100, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  animation: pop 0.9s ease-in-out;
+}
+
+#home h1 {
+  font-size: 3rem;
+}
+
+#home h2 {
+  font-size: 2rem;
+  color: #f1d48b;
+  text-shadow: 0 0 18px rgba(255, 215, 100, 0.5);
+}
+
+#home p {
+  color: #e6c87c;
+  max-width: 600px;
+  margin: auto;
+  font-weight: 500;
+}
+
+/* ===== SKILLS SECTION ===== */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  background: rgba(255, 215, 100, 0.1);
+  padding: 14px 20px;
+  margin: 10px 0;
+  border-left: 5px solid #ffdd7f;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.4s;
+  color: #f9e8b8;
+}
+
+#skills li:hover {
+  background: rgba(255, 215, 100, 0.18);
+  transform: translateX(10px);
+  box-shadow: 0 4px 12px rgba(255, 215, 100, 0.4);
+}
+
+/* ===== PROJECTS SECTION ===== */
+#projects {
+  text-align: center;
+}
+
+#projects img {
+  width: 80%;
+  max-width: 380px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 2px solid rgba(255, 215, 100, 0.4);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+  transition: 0.4s ease;
+}
+
+#projects img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 215, 100, 0.7);
+}
+
+#projects a {
+  color: #ffdd7f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+#projects a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #ffdd7f;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffdd7f, #f6c751);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(255, 215, 100, 0.4);
+}
+
+footer a:hover {
+  background: #ffe9a9;
+  color: #000;
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(255, 215, 100, 0.6);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+    </style>
 </head>
 <body>
 <header>

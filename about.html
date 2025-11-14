@@ -4,6 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      /* ===== GLOBAL PAGE ===== */
+body {
+  margin: 0;
+  padding: 40px;
+  background: radial-gradient(circle at top, #2a0a43, #120021, #000);
+  color: #d9c6ff; /* Soft Lavender */
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(140, 82, 255, 0.12);
+  border: 1.5px solid rgba(186, 136, 255, 0.35);
+  padding: 35px;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 22px rgba(116, 43, 255, 0.35);
+  animation: softPop 1s ease;
+}
+
+/* ===== HEADINGS ===== */
+#about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #c7a4ff;
+  text-shadow: 0 0 18px rgba(200, 140, 255, 0.75);
+  letter-spacing: 2px;
+}
+
+/* ===== DIVIDER ===== */
+hr {
+  border: none;
+  height: 2px;
+  margin: 20px auto 30px;
+  width: 70%;
+  background: linear-gradient(90deg, #a86dff, #fff, #8750ff);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(166, 100, 255, 0.7);
+}
+
+/* ===== PARAGRAPHS ===== */
+#about p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #e7d4ff;
+  text-shadow: 0 0 6px rgba(180, 140, 255, 0.35);
+}
+
+/* ===== IMAGE ===== */
+#about img {
+  display: block;
+  margin: 30px auto 0;
+  border-radius: 50%;
+  border: 3px solid #b987ff;
+  box-shadow: 0 0 30px rgba(155, 90, 255, 0.6);
+  transition: 0.4s ease;
+  width: 150px;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 45px rgba(185, 130, 255, 0.8);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+    </style>
 </head>
 <body>
     <section id="about">

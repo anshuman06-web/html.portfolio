@@ -4,22 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<style>
+
+/* Global Styling */
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a, #111111);
+  color: #f5d67b; /* Gold */
+  text-align: center;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.5),
+               0 0 30px rgba(255,255,255,0.2);
+}
+
+
+h2 {
+  font-size: 1.8rem;
+  color: #ffebc7;
+  opacity: 0.8;
+}
+
+/* Movie Buttons (h3 converted into buttons) */
+.movie-btn {
+  font-size: 1.7rem;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(135deg, #e6c176, #f9d98b, #ffe9b6);
+  border-radius: 10px;
+  transition: .4s ease;
+  font-weight: 600;
+}
+
+.movie-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 198, 79, 0.7);
+}
+
+/* Movie Descriptions */
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto 30px;
+  line-height: 1.6;
+  color: #fce7af;
+  opacity: 0.9;
+}
+
+/* Horizontal Line */
+hr {
+  border: none;
+  height: 2px;
+  margin: 20px auto;
+  width: 70%;
+  background: linear-gradient(90deg, #ffdd76, #ffcc3d, #ffdd76);
+  box-shadow: 0 0 10px gold;
+  animation: lineGlow 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+  to   { text-shadow: 0 0 25px rgba(255, 215, 0, 0.8); }
+}
+
+@keyframes lineGlow {
+  from { box-shadow: 0 0 5px gold; }
+  to   { box-shadow: 0 0 20px gold; }
+}
+
+</style>
+
 </head>
 <body>
-    <h1>The Best Movies Accoding to Anshuman</h1>
-    <h2>
-        My top 3 movies of all-time.
-    </h2>
-    <hr>
-    <h3>The Hangover</h3>
-    <p>This is my favourite movie. Love the story.</p>
-    <h3>
-        Fight Club
-    </h3>
-    <p>
-        This is also one of my favourite movie. Love the story and character brad pitt.
-    </p>
-    <h3>Bhaag Milkha Bhaag</h3>
-    <p>One of the greatest motivational movie of all time in bollywood.</p>
+
+<h1>The Best Movies According to Me</h1>
+<h2>My top 3 movies of all-time.</h2>
+<hr>
+
+<!-- MOVIE 1 -->
+<a class="movie-btn" target="_blank" href="https://www.google.com/search?q=The+Hangover+movie">
+  The Hangover
+</a>
+<p>
+"The Hangover" is one of the funniest and most unpredictable comedy films ever made.  
+It follows a group of friends who go to Las Vegas for a bachelor party, only to wake up the next morning with absolutely no memory of the night before.  
+The movie is filled with crazy events, unexpected surprises, and hilarious moments.  
+Every character adds a unique flavor to the story, making the entire movie feel like a thrilling, chaotic adventure.  
+I love it because it’s not just comedy — it’s an experience.
+</p>
+
+<!-- MOVIE 2 -->
+<a class="movie-btn" target="_blank" href="https://www.google.com/search?q=Fight+Club+movie">
+  Fight Club
+</a>
+<p>
+"Fight Club" is a powerful and mind-blowing film that explores identity, freedom, masculinity, and the chaos of modern life.  
+Brad Pitt absolutely dominates the screen with his iconic portrayal of Tyler Durden — stylish, rebellious, and unforgettable.  
+The movie challenges your way of thinking and keeps surprising you until the very end.  
+It's one of those films that you keep thinking about long after it's over.  
+That's why it's one of my personal favorites.
+</p>
+
+<!-- MOVIE 3 -->
+<a class="movie-btn" target="_blank" href="https://www.google.com/search?q=Bhaag+Milkha+Bhaag+movie">
+  Bhaag Milkha Bhaag
+</a>
+<p>
+"Bhaag Milkha Bhaag" is an inspiring masterpiece based on the real-life journey of Indian athlete Milkha Singh.  
+The movie beautifully shows his struggles, childhood trauma, hard work, dedication, and his rise to becoming one of the greatest runners in India.  
+Farhan Akhtar's transformation and acting are absolutely outstanding.  
+It's a film that motivates you to push your limits and chase greatness, no matter how tough life gets.  
+Truly one of the best motivational Bollywood movies of all time.
+</p>
+
 </body>
 </html>
