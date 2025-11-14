@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Vocabulary</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== GLOBAL PAGE ===== */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #0a0a0a, #111, #020202);
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #ffcc70;
+    text-shadow: 0 0 15px rgba(255, 200, 120, 0.8);
+    margin-top: 10px;
+    animation: glow 3s infinite alternate;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    color: #ffd;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* ===== COLOR TITLES ===== */
+.color-title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 8px;
+    width: 60%;
+    margin: 30px auto 10px;
+    animation: pop 0.5s ease-out;
+}
+
+/* Individual Color Animations */
+#red {
+    color: #ff6b6b;
+    background: rgba(255, 80, 80, 0.15);
+    box-shadow: 0 0 12px rgba(255, 80, 80, 0.4);
+}
+
+#blue {
+    color: #6bb6ff;
+    background: rgba(80, 150, 255, 0.15);
+    box-shadow: 0 0 12px rgba(80, 150, 255, 0.4);
+}
+
+#orange {
+    color: #ffb86b;
+    background: rgba(255, 150, 80, 0.15);
+    box-shadow: 0 0 12px rgba(255, 150, 80, 0.4);
+}
+
+#green {
+    color: #7dff6b;
+    background: rgba(120, 255, 120, 0.15);
+    box-shadow: 0 0 12px rgba(120, 255, 120, 0.4);
+}
+
+#yellow {
+    color: #fff07a;
+    background: rgba(255, 240, 100, 0.25);
+    box-shadow: 0 0 12px rgba(255, 240, 100, 0.5);
+}
+
+/* ===== IMAGES ===== */
+img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 26px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+}
+
+img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255, 200, 120, 0.4); }
+    to   { text-shadow: 0 0 25px rgba(255, 200, 120, 1); }
+}
+
+@keyframes pop {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Colors</h1>
+    <h2>Learn the colors in Spanish!</h2>
+    <h2 class="color-title" id="red">Rojo</h2>
+    <img src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-red-solid-color-background.jpg" alt="red" class="color" >
+
+    <h2 class="color-title" id="blue">Azul</h2>
+    <img src="https://www.solidbackgrounds.com/images/3840x2160/3840x2160-dark-blue-solid-color-background.jpg" alt="blue"> 
+
+    <h2 class="color-title" id="orange">Anaranjado</h2>
+    <img src="https://www.solidbackgrounds.com/images/3840x2160/3840x2160-amber-orange-solid-color-background.jpg" alt="orange">
+
+    <h2 class="color-title" id="green">Verde</h2>
+    <img src="https://static.vecteezy.com/system/resources/previews/017/150/430/large_2x/plain-default-lime-green-or-neon-green-solid-color-background-empty-space-without-anything-for-background-of-studio-room-and-display-ad-or-product-or-website-template-photo.jpg" alt="green">
+
+    <h2 class="color-title" id="yellow">Amarillo</h2>
+    <img src="https://www.solidbackgrounds.com/images/2880x1800/2880x1800-golden-yellow-solid-color-background.jpg" alt="yellow">
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Indian Flag</title>
+    <link rel="stylesheet" href="style.css">
+     <style>
+        /* Premium Gradient Background */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1a1a1a, #000000, #1f1f1f);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate ease-in-out;
+}
+
+/* Background Animation */
+@keyframes bgMove {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+/* Flag Container */
+.flag {
+    width: 450px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+
+    animation: float 6s ease-in-out infinite;
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.15),
+        0 0 30px rgba(255, 255, 255, 0.1),
+        0 0 45px rgba(255, 255, 255, 0.05);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-12px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Top Saffron Band */
+.orange {
+    height: 33.33%;
+    background: linear-gradient(90deg, #ff9933, #ff7f00, #ff9933);
+    animation: bandGlow 4s infinite alternate ease-in-out;
+}
+
+/* Middle White Band */
+.white {
+    height: 33.33%;
+    background: linear-gradient(90deg, #ffffff, #e8e8e8, #ffffff);
+    position: relative;
+    animation: bandGlow 4s infinite alternate ease-in-out;
+}
+
+/* Bottom Green Band */
+.green {
+    height: 33.33%;
+    background: linear-gradient(90deg, #138808, #0f6a06, #138808);
+    animation: bandGlow 4s infinite alternate ease-in-out;
+}
+
+/* Glow Animation for Bands */
+@keyframes bandGlow {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.15); }
+}
+
+/* Chakra */
+.chakra {
+    width: 75px;
+    height: 75px;
+    border: 4px solid #000080;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: chakraSpin 10s linear infinite, chakraGlow 3s ease-in-out infinite alternate;
+}
+
+/* Chakra Spin */
+@keyframes chakraSpin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Chakra Glow */
+@keyframes chakraGlow {
+    0% { box-shadow: 0 0 10px #00008055; }
+    100% { box-shadow: 0 0 20px #000080aa; }
+}
+
+     </style>
+</head>
+<body>
+
+    <div class="flag">
+        <div class="orange"></div>
+
+        <div class="white">
+            <div class="chakra"></div>
+        </div>
+
+        <div class="green"></div>
+    </div>
+
+</body>
+</html>

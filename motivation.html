@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivaltional Meme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Parisienne&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ===== Global ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #111, #000, #191919);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* ===== Meme Box ===== */
+.box {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 18px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0px 15px 35px rgba(255, 0, 0, 0.25),
+                0px 0px 40px rgba(255, 150, 150, 0.15);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    animation: fadeIn 1.3s ease-out;
+}
+
+/* ===== Image ===== */
+.box img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(255, 80, 80, 0.3);
+    transition: 0.3s;
+}
+
+.box img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 100, 100, 0.45);
+}
+
+/* ===== Heading ===== */
+.box h1 {
+    margin: 15px 0 8px;
+    font-size: 2.4rem;
+    font-family: "Parisienne", cursive;
+    color: #ff7777;
+    text-shadow: 0px 0px 15px rgba(255, 80, 80, 0.6),
+                 0px 0px 25px rgba(255, 150, 150, 0.4);
+    animation: glow 3s infinite alternate;
+}
+
+/* ===== Paragraph ===== */
+.box p {
+    font-size: 1.1rem;
+    font-family: "Caveat", cursive;
+    color: #ffdddd;
+    text-shadow: 0px 0px 6px rgba(255, 150, 150, 0.5);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0px 0px 10px rgba(255, 80, 80, 0.3); }
+    to   { text-shadow: 0px 0px 20px rgba(255, 150, 150, 0.8); }
+}
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://i.pinimg.com/originals/af/aa/f7/afaaf7dcb54352dbdfaec33076f85357.jpg" alt="bradd pit" >
+        <h1>Power of Self Control</h1>
+        <p>When you stop fearing loss, you become unstoppable.</p>
+    </div>
+</body>
+</html>
