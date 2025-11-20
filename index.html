@@ -34,7 +34,7 @@ hr {
   opacity: 0.7;
 }
 
-/* ===== NEW HERO SECTION ===== */
+/* ===== HERO ===== */
 .hero {
   position: relative;
   padding: 90px 20px;
@@ -43,25 +43,16 @@ hr {
   animation: pop 1s ease-in-out;
 }
 
-/* animated background */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      135deg,
-      #f7d98a,
-      #b88a2e,
-      #000000,
-      #3d2f12,
-      #f4cd74
-  );
+  background: linear-gradient(135deg, #f7d98a,#b88a2e,#000000,#3d2f12,#f4cd74);
   background-size: 400% 400%;
   animation: goldFlow 12s ease infinite;
   opacity: 0.18;
   filter: blur(20px);
 }
 
-/* glass content box */
 .hero-content {
   position: relative;
   max-width: 700px;
@@ -77,39 +68,25 @@ hr {
 
 .hero-content h1 {
   font-size: 2.3rem;
-  letter-spacing: 1px;
   margin: 0;
   color: #ffe7a0;
-  text-shadow: 0 0 15px rgba(255, 215, 100, 0.6);
 }
 
 .hero-content h2 {
   margin-top: 10px;
   font-size: 2rem;
   color: #f1d48b;
-  text-shadow: 0 0 12px rgba(255, 215, 100, 0.5);
 }
 
 .hero-content p {
   max-width: 80%;
   margin: 20px auto 0;
   color: #f5e7b3;
-  font-weight: 500;
   font-size: 1.1rem;
 }
 
-/* animations */
-@keyframes goldFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* ===== SKILLS ===== */
-#skills ul {
-  list-style: none;
-  padding: 0;
-}
+#skills ul { list-style: none; padding: 0; }
 
 #skills li {
   background: rgba(255, 215, 100, 0.1);
@@ -128,18 +105,14 @@ hr {
   box-shadow: 0 4px 12px rgba(255, 215, 100, 0.4);
 }
 
-/* ===== PROJECTS — UPDATED TO HORIZONTAL GRID ===== */
-
-#projects {
-  text-align: center;
-}
+/* ===== PROJECTS ===== */
+#projects { text-align: center; }
 
 .project-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   margin-top: 30px;
-  padding: 10px;
 }
 
 .project-card {
@@ -159,12 +132,10 @@ hr {
 .project-card h3 {
   font-size: 1.6rem;
   color: #ffdd7f;
-  text-shadow: 0 0 10px rgba(255,215,100,0.4);
 }
 
 .project-card p {
   color: #f5e1a4;
-  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -177,13 +148,11 @@ hr {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s ease;
 }
 
 .project-btn:hover {
   background: #ffe4a1;
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(255,215,100,0.6);
 }
 
 /* ===== FOOTER ===== */
@@ -194,34 +163,27 @@ footer {
 
 footer a {
   display: inline-block;
-  margin-top: 12px;
   font-size: 1.3rem;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
   background: linear-gradient(135deg, #ffdd7f, #f6c751);
   padding: 10px 18px;
   border-radius: 8px;
-  transition: 0.3s;
-  box-shadow: 0 3px 10px rgba(255, 215, 100, 0.4);
+  color: #000;
+  text-decoration: none;
+  margin: 8px 0;
 }
 
 footer a:hover {
   background: #ffe9a9;
-  color: #000;
-  transform: translateY(-4px);
-  box-shadow: 0 5px 15px rgba(255, 215, 100, 0.6);
+  transform: translateY(-3px);
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes pop {
-  0% { transform: scale(0.85); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+/* animations */
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes pop { from {transform:scale(0.85); opacity:0;} to {transform:scale(1); opacity:1;} }
+@keyframes goldFlow {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
     </style>
@@ -241,7 +203,6 @@ footer a:hover {
     <hr>
 </header>
 
-
 <main>
 
 <section id="skills">
@@ -260,37 +221,57 @@ footer a:hover {
 <section id="projects">
     <h1>My Projects</h1>
 
-    <!-- NEW HORIZONTAL GRID WRAPPER -->
     <div class="project-wrapper">
 
+        <!-- ORIGINAL PROJECTS -->
         <div class="project-card">
-            <h3>MOVIES PROJECT</h3>
-            <p>A clean and aesthetic webpage displaying my top movies with detailed descriptions and direct Google links.</p>
+            <h3>MOVIES</h3>
+            <p>A clean and aesthetic webpage displaying my top movies.</p>
             <a href="movie.html" class="project-btn">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>BIRTHDAY INVITE PROJECT</h3>
-            <p>A fun and simple birthday invitation page built using pure HTML, featuring images, lists, and a Google Maps link.</p>
+            <h3>BIRTHDAY INVITE</h3>
+            <p>A fun and simple birthday invitation page using pure HTML.</p>
             <a href="birthday.html" class="project-btn">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>MOTIVATIONAL POSTER PROJECT</h3>
-            <p>A motivational poster created using HTML & CSS with strong typography and a bold inspirational message.</p>
+            <h3>MOTIVATIONAL POSTER</h3>
+            <p>A motivational poster created using HTML & CSS.</p>
             <a href="motivation.html" class="project-btn">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>FLAG PROJECT</h3>
-            <p>A pure CSS-based flag design project built using shapes, layout, and gradients.</p>
+            <h3>FLAG</h3>
+            <p>A pure CSS-based flag design.</p>
             <a href="flag.html" class="project-btn">View Project</a>
         </div>
 
         <div class="project-card">
-            <h3>COLOR VOCAB PROJECT</h3>
-            <p>A webpage showing different colors, their names, and CSS-styled color blocks.</p>
+            <h3>COLOR VOCAB</h3>
+            <p>A webpage showing colors & color blocks.</p>
             <a href="color.html" class="project-btn">View Project</a>
+        </div>
+
+        <!-- 🔥🔥🔥 NEW 3 PROJECT CARDS ADDED HERE 🔥🔥🔥 -->
+
+        <div class="project-card">
+            <h3>FLEXBOX SHOWCASE</h3>
+            <p>A stylish modern layout demonstrating Flexbox properties.</p>
+            <a href="flexbox.html" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>GRID SHOWCASE</h3>
+            <p>An advanced CSS Grid layout project with animations & design.</p>
+            <a href="grid.html" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>LOADER ANIMATION</h3>
+            <p>A multi-ring neon animated loader created using pure CSS.</p>
+            <a href="loader.html" class="project-btn">View Project</a>
         </div>
 
     </div>
