@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff6fd8, #6a5af9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 18px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.76);
+}
+
+.turn {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.cell {
+  height: 90px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 14px;
+  font-size: 44px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.cell:hover {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.4);
+}
+
+.cell.pop {
+  animation: pop 0.25s ease;
+}
+
+.cell.win {
+  background: #00e676 !important;
+  color: #003300;
+  animation: glow 0.8s infinite alternate;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background: #ffeb3b;
+  color: #333;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0px 0px 5px black;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #fff176;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px #00e676; }
+  to { box-shadow: 0 0 20px #00e676; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="game">
+  <h1>Tic Tac Toe</h1>
+  <div class="turn" id="turnText">Player X Turn</div>
+
+  <div class="board">
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+
+  <button onclick="resetGame()">Reset Game</button>
+</div>
+
+
+<div class="container hidden" id="result">
+  <h1 id="resultText"></h1>
+  <button onclick="newGame()">New Game</button>
+</div>
+<script>
+const cells = document.querySelectorAll('.cell');
+
+const turnText = document.getElementById('turnText');
+const game = document.getElementById('game');
+const result = document.getElementById('result');
+const resultText = document.getElementById('resultText');
+
+let player = 'X';
+
+
+let active = true;
+
+
+const wins = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+];
+
+
+cells.forEach((cell, index) => {
+  cell.onclick = () => play(cell, index);
+});
+
+function play(cell, index) {
+
+  if (!active || cell.textContent !== '') return;
+
+  
+  cell.textContent = player;
+
+
+  cell.classList.add('pop');
+
+  
+  if (checkWin()) {
+    highlightWin();
+    endGame(`🎉 Player ${player} Wins!`);
+    return;
+  }
+
+  
+  if ([...cells].every(c => c.textContent !== '')) {
+    endGame("😐 It's a Draw!");
+    return;
+  }
+
+ 
+  player = player === 'X' ? 'O' : 'X';
+  turnText.textContent = `Player ${player} Turn`;
+}
+
+
+function checkWin() {
+  return wins.some(pattern =>
+    pattern.every(i => cells[i].textContent === player)
+  );
+}
+
+
+function highlightWin() {
+  wins.forEach(pattern => {
+    if (pattern.every(i => cells[i].textContent === player)) {
+      pattern.forEach(i => cells[i].classList.add('win'));
+    }
+  });
+}
+function endGame(text) {
+  active = false;
+
+  setTimeout(() => {
+    game.classList.add('hidden');
+    result.classList.remove('hidden');
+    resultText.textContent = text;
+  }, 700);
+}
+
+function resetGame() {
+  cells.forEach(cell => {
+    cell.textContent = '';
+    cell.className = 'cell';
+  });
+
+  player = 'X';
+  active = true;
+  turnText.textContent = 'Player X Turn';
+}
+
+function newGame() {
+  resetGame();
+  result.classList.add('hidden');
+  game.classList.remove('hidden');
+}
+</script>
+</body>
+</html>
